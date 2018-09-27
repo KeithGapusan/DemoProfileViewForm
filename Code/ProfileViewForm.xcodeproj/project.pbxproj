@@ -7,17 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7289470215C5C22009973C3 /* ProfileFormHolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728946F215C5C22009973C3 /* ProfileFormHolderViewController.swift */; };
+		F7289473215C5DEC009973C3 /* CompleteProfilePage1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7289472215C5DEC009973C3 /* CompleteProfilePage1.swift */; };
+		F7289475215C5DFE009973C3 /* CompleteProfilePage2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7289474215C5DFE009973C3 /* CompleteProfilePage2.swift */; };
+		F7289477215C5E0A009973C3 /* CompleteProfilePage3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7289476215C5E0A009973C3 /* CompleteProfilePage3.swift */; };
+		F7289479215C5E17009973C3 /* CompleteProfilePage4.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7289478215C5E17009973C3 /* CompleteProfilePage4.swift */; };
+		F728947C215C6594009973C3 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F728947B215C6594009973C3 /* PageViewController.swift */; };
 		F7AC3ACA215B308C009D8AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC3AC9215B308C009D8AC1 /* AppDelegate.swift */; };
-		F7AC3ACC215B308C009D8AC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AC3ACB215B308C009D8AC1 /* ViewController.swift */; };
 		F7AC3ACF215B308C009D8AC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AC3ACD215B308C009D8AC1 /* Main.storyboard */; };
 		F7AC3AD1215B308C009D8AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7AC3AD0215B308C009D8AC1 /* Assets.xcassets */; };
 		F7AC3AD4215B308C009D8AC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7AC3AD2215B308C009D8AC1 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F728946F215C5C22009973C3 /* ProfileFormHolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormHolderViewController.swift; sourceTree = "<group>"; };
+		F7289472215C5DEC009973C3 /* CompleteProfilePage1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfilePage1.swift; sourceTree = "<group>"; };
+		F7289474215C5DFE009973C3 /* CompleteProfilePage2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfilePage2.swift; sourceTree = "<group>"; };
+		F7289476215C5E0A009973C3 /* CompleteProfilePage3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfilePage3.swift; sourceTree = "<group>"; };
+		F7289478215C5E17009973C3 /* CompleteProfilePage4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProfilePage4.swift; sourceTree = "<group>"; };
+		F728947B215C6594009973C3 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		F7AC3AC6215B308C009D8AC1 /* ProfileViewForm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileViewForm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7AC3AC9215B308C009D8AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F7AC3ACB215B308C009D8AC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7AC3ACE215B308C009D8AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7AC3AD0215B308C009D8AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7AC3AD3215B308C009D8AC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +45,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F728946E215C5BD2009973C3 /* ContentViewHolder */ = {
+			isa = PBXGroup;
+			children = (
+				F728947A215C655E009973C3 /* PageViewController */,
+				F7289471215C5C3C009973C3 /* ViewControllers */,
+				F728946F215C5C22009973C3 /* ProfileFormHolderViewController.swift */,
+			);
+			path = ContentViewHolder;
+			sourceTree = "<group>";
+		};
+		F7289471215C5C3C009973C3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7289472215C5DEC009973C3 /* CompleteProfilePage1.swift */,
+				F7289474215C5DFE009973C3 /* CompleteProfilePage2.swift */,
+				F7289476215C5E0A009973C3 /* CompleteProfilePage3.swift */,
+				F7289478215C5E17009973C3 /* CompleteProfilePage4.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F728947A215C655E009973C3 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F728947B215C6594009973C3 /* PageViewController.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
 		F7AC3ABD215B308B009D8AC1 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +93,8 @@
 		F7AC3AC8215B308C009D8AC1 /* ProfileViewForm */ = {
 			isa = PBXGroup;
 			children = (
+				F728946E215C5BD2009973C3 /* ContentViewHolder */,
 				F7AC3AC9215B308C009D8AC1 /* AppDelegate.swift */,
-				F7AC3ACB215B308C009D8AC1 /* ViewController.swift */,
 				F7AC3ACD215B308C009D8AC1 /* Main.storyboard */,
 				F7AC3AD0215B308C009D8AC1 /* Assets.xcassets */,
 				F7AC3AD2215B308C009D8AC1 /* LaunchScreen.storyboard */,
@@ -136,7 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7AC3ACC215B308C009D8AC1 /* ViewController.swift in Sources */,
+				F7289470215C5C22009973C3 /* ProfileFormHolderViewController.swift in Sources */,
+				F728947C215C6594009973C3 /* PageViewController.swift in Sources */,
+				F7289473215C5DEC009973C3 /* CompleteProfilePage1.swift in Sources */,
+				F7289477215C5E0A009973C3 /* CompleteProfilePage3.swift in Sources */,
+				F7289475215C5DFE009973C3 /* CompleteProfilePage2.swift in Sources */,
+				F7289479215C5E17009973C3 /* CompleteProfilePage4.swift in Sources */,
 				F7AC3ACA215B308C009D8AC1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
