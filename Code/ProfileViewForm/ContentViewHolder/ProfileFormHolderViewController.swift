@@ -60,13 +60,11 @@ class ProfileFormHolderViewController: UIViewController {
        
         switch viewController {
         case "page1":
-            containerView.frame.size.height = 200
-            contentViewHeight.constant = 200
+
           return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage1
             
         case "page2":
-              containerView.frame.size.height = 2900
-              contentViewHeight.constant = 2900
+
          return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage2
         case "page3":
           return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage3
