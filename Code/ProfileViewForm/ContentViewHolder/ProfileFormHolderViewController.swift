@@ -20,19 +20,9 @@ class ProfileFormHolderViewController: UIViewController {
                 self.newVc(viewController: "page4")]
     }()
     
-    lazy var imageListName : [String] = {
-        return ["newsandblogsIcon","portfolioIcon","contactIcon","eventsIcon","profileIcon"]
-    }()
-    lazy var descriptionList : [String] = {
-        return ["Know what’s happening in StraightArrow and the outsourcing industry.",
-                "Check out some of our work and get a glimpse of our creativity and our passion.",
-                "Submit your inquiries, learn how you can reach us or take a virtual tour around our office.",
-                "Check-out upcoming StraightArrow events!",
-                "Register and create your profile for full access to all of our app’s features"]
-    }()
-    lazy var titles : [String] = {
-        return ["Blog","Portfolio","Contact Us","Events","Profile"]
-    }()
+
+
+
     
     lazy var backgroundList : [UIColor] =  {
         return [UIColor.cyan, UIColor.blue , UIColor.brown, UIColor.darkGray]
@@ -43,10 +33,11 @@ class ProfileFormHolderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        w = self.childViewControllers[0] as!  PageViewController
+        w = self.childViewControllers[0] as?  PageViewController
         w.pageDelegate = self
         w.setCurrentIndex(index: 0)
         w.setBackgroundColorList(backgroundList)
+        w.setOrderedViewController(orderedViewControllers)
 //        w.setViewController(views: orderedViewControllers)
 //        w.setImageList(images:  imageListName)
 //        w.setDescList(descriptions: descriptionList)
@@ -60,18 +51,15 @@ class ProfileFormHolderViewController: UIViewController {
        
         switch viewController {
         case "page1":
-
-          return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage1
-            
+            return  UIStoryboard(name: "CompleteProfile", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage1
         case "page2":
-
-         return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage2
+            return  UIStoryboard(name: "CompleteProfile", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage2
         case "page3":
-          return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage3
+            return  UIStoryboard(name: "CompleteProfile", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage3
         case "page4":
-         return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage4
+            return  UIStoryboard(name: "CompleteProfile", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage4
         default:
-          return  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage1
+            return  UIStoryboard(name: "CompleteProfile", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage1
         }
       
     }

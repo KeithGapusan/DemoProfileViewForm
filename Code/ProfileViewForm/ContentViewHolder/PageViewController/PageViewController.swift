@@ -22,12 +22,7 @@ class PageViewController: UIPageViewController {
         return pageController
     }()
     
-    lazy var orderedViewControllers: [UIViewController] = {
-        return [self.newVc(viewController: "page1"),
-                self.newVc(viewController: "page2"),
-                self.newVc(viewController: "page3"),
-                self.newVc(viewController: "page4")]
-    }()
+    var orderedViewControllers = [UIViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
@@ -39,21 +34,14 @@ class PageViewController: UIPageViewController {
          configurePageControl()
         print("didappear \(currentViewIndex)")
     }
+    
+    
+    func setOrderedViewController(_ listViewController : [UIViewController]){
+        self.orderedViewControllers = listViewController
+    }
     func setCurrentView(index : Int){
         print("set curr  = \(index)")
         print("set curr  = \(orderedViewControllers)")
-//        let vc = orderedViewControllers[index] as! CompleteProfilePage1
-//        setViewControllers([vc],
-//                           direction: .forward,
-//                           animated: true,
-//                           completion:{(value:Bool) in
-//                            print("completed 0\(value)")
-//                            if value {
-//                                self.pageDelegate.didUpdatePageView(sender: index)
-//                                vc.setBackgroundColor(color: self.backgroundColorList[index])
-//                            }
-//
-//        })
         switch index {
         case 0:
            
@@ -76,7 +64,7 @@ class PageViewController: UIPageViewController {
                                direction: .forward,
                                animated: true,
                                completion:{(value:Bool) in
-                                print("completed 1\(value)")
+                            
                                 if value {
                                     self.pageDelegate.didUpdatePageView(sender: index)
                                     vc.setBackgroundColor(color: self.backgroundColorList[index])
@@ -90,7 +78,7 @@ class PageViewController: UIPageViewController {
                                direction: .forward,
                                animated: true,
                                completion:{(value:Bool) in
-                                print("completed 2\(value)")
+                               
                                 if value {
                                     self.pageDelegate.didUpdatePageView(sender: index)
                                     vc.setBackgroundColor(color: self.backgroundColorList[index])
@@ -104,7 +92,7 @@ class PageViewController: UIPageViewController {
                                direction: .forward,
                                animated: true,
                                completion:{(value:Bool) in
-                                print("completed 3 \(value)")
+                    
                                 if value {
                                     self.pageDelegate.didUpdatePageView(sender: index)
                                     vc.setBackgroundColor(color: self.backgroundColorList[index])
@@ -220,22 +208,5 @@ extension PageViewController : UIPageViewControllerDelegate, UIPageViewControlle
         self.pageDelegate.didUpdatePageView(sender: nextIndex)
         return orderedViewControllers[nextIndex]
     }
-    func newVc(viewController: String) -> UIViewController {
- 
-        switch viewController {
-        case "page1":
-         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage1
-        case "page2":
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage2
-        case "page3":
-        return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage3
-        case "page4":
-          return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage4
-        default:
-         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: viewController) as! CompleteProfilePage1
-        }
-        
-    }
-    
     
 }
